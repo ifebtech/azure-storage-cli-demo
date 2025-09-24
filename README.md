@@ -27,17 +27,29 @@ The goal of this project is to practice **hands-on cloud skills** and document t
 
 Here are some screenshots from the process (replace with your actual images):
 
-![Upload Screenshot](screenshots/upload.png)  
-*Uploading a file to Azure Blob Storage*
+## Screenshots  
 
-![Download Screenshot](screenshots/download.png)  
-*Downloading a blob back to Cloud Shell*
+### 1. Container Created  
+![Container Created](container%20created.JPG)  
 
-![Metadata Screenshot](screenshots/metadata.png)  
-*Updating and viewing blob metadata*
+### 2. Metadata Added Successfully  
+![Metadata Added](metadata%20added%20successfully.JPG)  
 
-![List Blobs Screenshot](screenshots/list.png)  
-*Listing blobs in the container with metadata*
+### 3. After Uploading PDF & Verification  
+![PDF Upload Verification](after%20uploadind%20pdf,%20verification.JPG)  
+
+### 4. Hello.txt File Upload Successful  
+![Hello.txt Upload](hello%20txt%20file%20upoad%20succesful.JPG)  
+
+### 5. Hello.txt File Check After Upload  
+![Hello.txt Check](hello%20txt%20file%20check%20after%20upload.JPG)  
+
+### 6. Hello.txt Download and Verification (Part 1)  
+![Download Verification 1](hellotxt%20download%20and%20verification.1.JPG)  
+
+### 7. Hello.txt Download and Verification (Part 2)  
+![Download Verification 2](hellotxt%20download%20and%20verification.2.JPG)  
+
 
 ---
 

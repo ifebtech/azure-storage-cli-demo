@@ -30,6 +30,7 @@ A storage account is the top-level resource that provides a unique namespace to 
 ```bash
 az storage account create --name ifeanyistorage --resource-group <your-resource-group> --location <your-location> --sku Standard_LRS
 
+
 Screenshot:
 
 3.2 Create a Container

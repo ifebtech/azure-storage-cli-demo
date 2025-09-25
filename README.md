@@ -6,17 +6,17 @@ The Azure Blob Storage Project demonstrates how to use Azure CLI in Cloud Shell 
 
 In this project, I worked with the following key steps:
 
- - **Creating a Storage Account – A storage account is the foundational resource in Azure that provides a unique namespace to store data.
+ - **Creating a Storage Account – A storage account is the foundational resource in Azure that provides a unique namespace to store data**.
 
-- **Creating a Container – A container acts like a folder inside the storage account, helping organize and group blobs.
+- **Creating a Container – A container acts like a folder inside the storage account, helping organize and group blobs**.
 
-- **Uploading Files – Files (blobs) such as text documents and PDFs were uploaded to the container to simulate real use cases.
+- **Uploading Files – Files (blobs) such as text documents and PDFs were uploaded to the container to simulate real use cases**.
 
-- **Verifying and Downloading Files – Uploaded files were verified and downloaded to ensure data integrity.
+- **Verifying and Downloading Files – Uploaded files were verified and downloaded to ensure data integrity**.
 
-- **Adding Metadata – Metadata was attached to blobs in the form of key–value pairs to provide extra information, such as ownership and project name.
+- **Adding Metadata – Metadata was attached to blobs in the form of key–value pairs to provide extra information, such as ownership and project name**.
 
-- **Listing Blobs – Finally, the container was queried to list blobs and confirm that metadata was successfully applied.
+- **Listing Blobs – Finally, the container was queried to list blobs and confirm that metadata was successfully applied**.
 
 By completing this project, I gained hands-on experience with Azure storage services and learned how to manage cloud resources using the CLI. This is an essential foundation for more advanced cloud computing tasks.
 ---

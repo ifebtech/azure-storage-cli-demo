@@ -1,27 +1,35 @@
-# Azure Storage CLI Demo
+# Azure Blob Storage Project with Azure CLI  
 
-1. Introduction
+## 📌 Introduction  
+This project demonstrates how to use **Azure Storage (Blob Service)** to store, manage, and retrieve files in the cloud.  
 
-This project demonstrates how to use Azure Storage (Blob Service) to store, manage, and retrieve files in the cloud. It shows the process of creating a storage account, uploading and downloading files, managing metadata, and verifying results through the Azure CLI.
+It shows the process of:  
+- Creating a storage account  
+- Creating a container  
+- Uploading and downloading files  
+- Adding and verifying metadata  
+- Listing blobs with metadata  
 
-By completing this project, I gained hands-on practice with Azure CLI commands and understood how storage resources are created and managed in the cloud.
+By completing this project, I gained **hands-on practice** with Azure CLI commands and understood how storage resources are created and managed in the cloud.  
 
-2. Prerequisites
+---
 
-Before starting, ensure you have the following:
+## 🛠️ Prerequisites  
+Before starting, ensure you have:  
+- An **Azure account** with access to Cloud Shell  
+- **Azure CLI** (pre-installed in Cloud Shell)  
+- Basic knowledge of using the terminal  
 
-An Azure account with access to Cloud Shell.
+---
 
-Azure CLI (pre-installed in Cloud Shell).
+## 🚀 Step-by-Step Implementation  
 
-Basic knowledge of using the terminal.
+### 1️⃣ Create a Storage Account  
+A storage account is the top-level resource that provides a unique namespace to store and access your data.  
 
-3. Step-by-Step Implementation
-3.1 Create a Storage Account
-
-A storage account is the top-level resource that provides a unique namespace to store and access your data. In this project, it is used to hold all the blobs (files) and containers we work with.
-Command:
+```bash
 az storage account create --name ifeanyistorage --resource-group <your-resource-group> --location <your-location> --sku Standard_LRS
+
 Screenshot:
 
 3.2 Create a Container

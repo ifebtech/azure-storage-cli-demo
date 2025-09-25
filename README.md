@@ -72,7 +72,7 @@ Download the file back and confirm it matches the original.
 ### 8. Hello.txt Download and Verification (Part 2)  
 ![Download Verification 2](hellotxt%20download%20and%20verification.2.JPG)  
 
-⚡ Challenges faced and Fixes
+**⚡ Challenges faced and Fixes**
 
 File not found error (No such file or directory: 'hello.txt')
 
@@ -86,7 +86,7 @@ Cause: Needed to re-run az storage blob show --query "metadata".
 
 Fix: Confirmed metadata was successfully stored.
 
-✅ Conclusion
+✅ **Conclusion**
 
 In this project, I successfully:
 
@@ -100,7 +100,7 @@ Documented the process with screenshots and logs
 
 Learned how to troubleshoot common issues
 
-This project gave me practical exposure to managing Azure Blob Storage, which is a foundational cloud skill.
+**This project gave me practical exposure to managing Azure Blob Storage, which is a foundational cloud skill.**
 ---
 
 ## 💻 Scripts / Commands Used

@@ -1,4 +1,5 @@
 Azure Blob Storage Project with Azure CLI
+
 📌 Overview
 
 The Azure Blob Storage Project demonstrates how to use Azure CLI in Cloud Shell to perform real-world cloud storage operations. Blob storage is a service for storing large amounts of unstructured data, such as text or binary files.

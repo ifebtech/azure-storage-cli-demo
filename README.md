@@ -1,119 +1,149 @@
-# Azure Blob Storage Project with Azure CLI  
+Azure Blob Storage Project with Azure CLI
+📌 Overview
 
-## 📌 Introduction  
-This project demonstrates how to use **Azure Storage (Blob Service)** to store, manage, and retrieve files in the cloud.  
+This project demonstrates how to use the Azure CLI in Azure Cloud Shell to perform common blob storage operations.
 
-It shows the process of:  
-- Creating a storage account  
-- Creating a container  
-- Uploading and downloading files  
-- Adding and verifying metadata  
-- Listing blobs with metadata  
+It shows how to:
 
-By completing this project, I gained **hands-on practice** with Azure CLI commands and understood how storage resources are created and managed in the cloud.  
+Create a storage account
+
+Create a container
+
+Upload and download blobs
+
+Add and verify metadata
+
+List blobs with metadata
+
+The goal of this project is to practice hands-on cloud skills and document the process clearly so others can follow along.
+---
+
+## 🛠️ Technologies Used
+- **Microsoft Azure**
+- **Azure CLI** (Cloud Shell)
+- **Azure Blob Storage**
+- **GitHub** (for documentation & portfolio)
 
 ---
 
-## 🛠️ Prerequisites  
-Before starting, ensure you have:  
-- An **Azure account** with access to Cloud Shell  
-- **Azure CLI** (pre-installed in Cloud Shell)  
-- Basic knowledge of using the terminal  
+## 📂 Project Files
+- `README.md` → Documentation of the project (this file).  
+- `log.txt` → Raw terminal session log (commands + outputs).  
+- `screenshots/` → Screenshots of key steps for reference.  
 
 ---
 
-## 🚀 Step-by-Step Implementation  
+## 📸 Screenshots
 
-### 1️⃣ Create a Storage Account  
-A storage account is the top-level resource that provides a unique namespace to store and access your data.  
+Here are some screenshots from the process (replace with your actual images):
 
-```bash
-az storage account create --name ifeanyistorage --resource-group <your-resource-group> --location <your-location> --sku Standard_LRS
+🚀 Step-by-Step Implementation
+1️⃣ Create a Storage Account
+
+A storage account is the top-level resource in Azure that provides a unique namespace for storing data.
 
 
-Screenshot:
+### 2️⃣. Container Created 
 
-3.2 Create a Container
+A container organizes blobs inside a storage account (like a folder in a file system).
+![Container Created](container%20created.JPG)  
 
-A container organizes blobs within a storage account, similar to a folder in a file system. In this project, the container will store our project files.
+### 3. Hello.txt File Upload Successful  
+A blob is an individual file stored inside a container.
+Here, a simple text file (hello.txt) is uploaded.
+![Hello.txt Upload](hello%20txt%20file%20upoad%20succesful.JPG) 
 
-Command:
-az storage container create --name projectfiles --account-name ifeanyistorage --auth-mode login
+### 4. Hello.txt File Check After Upload  
+To confirm the upload worked, the file is downloaded again and verified locally.
+![Hello.txt Check](hello%20txt%20file%20check%20after%20upload.JPG) 
 
-Screenshot:
+### 5. After Uploading PDF & Verification  
+To further test blob uploads, a PDF file was uploaded and verified in the container.
+![PDF Upload Verification](after%20uploadind%20pdf,%20verification.JPG)  
 
-3.3 Upload a File (hello.txt)
+### 6.  Add Metadata to the File  
+Metadata provides extra information about a blob in key-value pairs.
+![Metadata Added](metadata%20added%20successfully.JPG)  
 
-A blob is an individual file stored inside a container. Here, we upload a simple text file (hello.txt) to test the upload functionality.
+### 7. Hello.txt Download and Verification (Part 1) 
+Download the file back and confirm it matches the original.
+![Download Verification 1](hellotxt%20download%20and%20verification.1.JPG)  
 
-Command:
-az storage blob upload --account-name ifeanyistorage --container-name projectfiles --name hello.txt --file hello.txt --auth-mode login
+### 8. Hello.txt Download and Verification (Part 2)  
+![Download Verification 2](hellotxt%20download%20and%20verification.2.JPG)  
 
-Screenshots:
-
-3.4 Download and Verify the File
-
-To confirm the upload worked, the file is downloaded again from Azure storage and compared locally.
-
-Command:
-az storage blob download --account-name ifeanyistorage --container-name projectfiles --name hello.txt --file downloaded-hello.txt --auth-mode login
-
-Screenshots:
-
-3.5 Add Metadata to the File
-
-Metadata provides extra information about a blob in key-value pairs. In this project, metadata identifies the file owner and project name.
-
-Command:
-az storage blob metadata update --account-name ifeanyistorage --container-name projectfiles --name hello.txt --metadata owner=ifeanyi project=azurebootcamp --auth-mode login
-
-Screenshot:
-
-4. Full Command Reference
-
-Here is the full list of commands used:
-
-az storage account create --name ifeanyistorage --resource-group <your-resource-group> --location <your-location> --sku Standard_LRS
-
-az storage container create --name projectfiles --account-name ifeanyistorage --auth-mode login
-
-az storage blob upload --account-name ifeanyistorage --container-name projectfiles --name hello.txt --file hello.txt --auth-mode login
-
-az storage blob download --account-name ifeanyistorage --container-name projectfiles --name hello.txt --file downloaded-hello.txt --auth-mode login
-
-az storage blob metadata update --account-name ifeanyistorage --container-name projectfiles --name hello.txt --metadata owner=ifeanyi project=azurebootcamp --auth-mode login
-
-az storage blob show --account-name ifeanyistorage --container-name projectfiles --name hello.txt --auth-mode login --query "metadata"
-
-az storage blob list --account-name ifeanyistorage --container-name projectfiles --auth-mode login --query "[].{name:name, metadata:metadata}" --output json
-
-5. Challenges and Fixes
+⚡ Challenges faced and Fixes
 
 File not found error (No such file or directory: 'hello.txt')
 
-Cause: Tried uploading a file that was not present in the current directory.
+Cause: Tried uploading a file that was not in the current directory.
 
-Fix: Created the hello.txt file locally before running the upload command.
+Fix: Created the hello.txt file locally before running the command.
 
 Metadata not showing after update
 
-Cause: Needed to re-run az storage blob show with --query "metadata".
+Cause: Needed to re-run az storage blob show --query "metadata".
 
-Fix: Confirmed the metadata was successfully stored.
+Fix: Confirmed metadata was successfully stored.
 
-These challenges helped me understand the importance of verifying each step and checking file paths carefully.
-
-6. Conclusion
+✅ Conclusion
 
 In this project, I successfully:
 
-Created a storage account and container in Azure.
+Created a storage account and container in Azure
 
-Uploaded and downloaded files (blobs).
+Uploaded and downloaded blobs
 
-Added and verified metadata.
+Added and verified metadata
 
-Learned to troubleshoot common issues in Azure CLI.
+Documented the process with screenshots and logs
 
-This project gave me practical exposure to managing Azure Storage resources, which is a foundational skill for cloud computing.
+Learned how to troubleshoot common issues
+
+This project gave me practical exposure to managing Azure Blob Storage, which is a foundational cloud skill.
+---
+
+## 💻 Scripts / Commands Used
+
+```bash
+# Upload a file to storage
+az storage blob upload \
+  --account-name ifeanyistorage \
+  --container-name projectfiles \
+  --name hello.txt \
+  --file hello.txt \
+  --auth-mode login
+
+# Download a blob
+az storage blob download \
+  --account-name ifeanyistorage \
+  --container-name projectfiles \
+  --name hello.txt \
+  --file downloaded-hello.txt \
+  --auth-mode login
+
+# Update blob metadata
+az storage blob metadata update \
+  --account-name ifeanyistorage \
+  --container-name projectfiles \
+  --name hello.txt \
+  --metadata owner=ifeanyi project=azurebootcamp \
+  --auth-mode login
+
+# Show blob metadata
+az storage blob show \
+  --account-name ifeanyistorage \
+  --container-name projectfiles \
+  --name hello.txt \
+  --auth-mode login \
+  --query "metadata"
+
+# List blobs in the container
+az storage blob list \
+  --account-name ifeanyistorage \
+  --container-name projectfiles \
+  --auth-mode login \
+  --query "[].{name:name, metadata:metadata}" \
+  --output json 
+
 
